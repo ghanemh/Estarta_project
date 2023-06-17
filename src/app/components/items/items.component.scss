@@ -1,0 +1,23 @@
+.main{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+width: 600px;
+}
+mat-list-item{
+    background-color: rgb(219, 215, 215);
+    border: 1px solid black;
+    margin-top: 10px;
+}
+.checked {
+    color: green;
+    font-weight: 700;
+    margin-left: 5px;
+}
+.unChekecd {
+    color: red;
+    font-weight: 700;
+    margin-left: 5px;
+}

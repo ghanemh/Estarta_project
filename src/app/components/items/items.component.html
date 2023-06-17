@@ -1,0 +1,26 @@
+<div class="main">
+<mat-card class="mat-elevation-z8 card">
+    <mat-card-title>List</mat-card-title>
+  <mat-card-content>
+    <mat-list cdkDropList (cdkDropListDropped)="onItemDrop($event)" role="list">
+      <mat-list-item  cdkDrag   *ngFor="let item of Items; let i = index" role="listitem">
+        <mat-checkbox  [(ngModel)]="item.checked"
+        (change)="handleCheckboxChange(item)"
+        class="example-margin">{{item.name}}</mat-checkbox>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<mat-card class="mat-elevation-z8 card">
+    <mat-card-title>Edited items</mat-card-title>
+  <mat-card-content>
+    <mat-list  role="list">
+      <mat-list-item    *ngFor="let editItem of editItems; let i = index" role="listitem">
+       {{editItem?.name}}
+      <span class="checked" *ngIf="editItem?.checked===true">checked</span>
+      <span class="unChekecd" *ngIf="editItem?.checked===false">unCheked</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+</div>
